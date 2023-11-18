@@ -1,0 +1,10 @@
+version: '1'
+services:
+  spark:
+    image: spark:latest
+    build: ./app
+    command: chainlit run app/spark.py
+    volumes:
+      - ./app/:/app/app
+    ports:
+      - 8000:8000
